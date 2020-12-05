@@ -1,0 +1,33 @@
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/api/dog
+
+###
+
+GET http://localhost:3000/api/dog/1
+
+###
+
+POST http://localhost:3000/api/dog
+Content-Type: application/json
+
+{
+    "name": "Bim"
+}
+
+###
+
+PATCH  http://localhost:3000/api/dog/7
+Content-Type: application/json
+
+{
+    "name": "Vally"
+}
+
+###
+
+DELETE  http://localhost:3000/api/dog/1
+
+###
