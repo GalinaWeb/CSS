@@ -14,16 +14,19 @@ POST http://localhost:3000/api/dog
 Content-Type: application/json
 
 {
-    "name": "Bim"
+    "name": "B",
+    "breed": "none",
+    "age": 4
 }
 
 ###
 
-PATCH  http://localhost:3000/api/dog/7
+PATCH  http://localhost:3000/api/dog/1
 Content-Type: application/json
 
 {
-    "name": "Vally"
+    "name": "Vally",
+    "age": 8
 }
 
 ###
