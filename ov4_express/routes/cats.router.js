@@ -40,7 +40,7 @@ catsRouter.patch('/:catId', async (req, res) => {
     if (color) updateCat.color = color
     if (weight) updateCat.weight = weight
     if (food) updateCat.food = food
-    const cat = await Cat.update({name, color, weight, food}, {
+    const cat = await Cat.update(updateCat, {
         where: {
             id: catId
         }

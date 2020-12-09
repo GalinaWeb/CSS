@@ -39,7 +39,7 @@ GET http://localhost:3000/api/cat
 
 ###
 
-GET http://localhost:3000/api/cat/1
+GET http://localhost:3000/api/cat/2
 
 ###
 
@@ -47,9 +47,9 @@ POST http://localhost:3000/api/cat
 Content-Type: application/json
 
 {
-    "name": "Moris",
-    "color": "white",
-    "weight": 4,
+    "name": "RRRRRR",
+    "color": "black",
+    "weight": 2,
     "food": "catsFood"
 }
 
@@ -60,7 +60,7 @@ Content-Type: application/json
 
 {
     "name": "Apricot",
-    "color": "Red"
+    "color": "Yellow"
 }
 
 ###
