@@ -34,3 +34,37 @@ Content-Type: application/json
 DELETE  http://localhost:3000/api/dog/1
 
 ###
+
+GET http://localhost:3000/api/cat
+
+###
+
+GET http://localhost:3000/api/cat/1
+
+###
+
+POST http://localhost:3000/api/cat
+Content-Type: application/json
+
+{
+    "name": "Moris",
+    "color": "white",
+    "weight": 4,
+    "food": "catsFood"
+}
+
+###
+
+PATCH  http://localhost:3000/api/cat/1
+Content-Type: application/json
+
+{
+    "name": "Apricot",
+    "color": "Red"
+}
+
+###
+
+DELETE  http://localhost:3000/api/cat/1
+
+###
