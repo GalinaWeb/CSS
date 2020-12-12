@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="getAllDogs-container" id="all"></div>
+    <div class="getOneDog-container" id="getOneDog">
+        <input id="dog-id-get-input" type="text">
+        <button class="btn btn-primary" id="dog-id-get-button">Получить</button>
+        <div id="dog-info"></div>
+    </div>
+    <br>
+    <div class="createAllDogs-container" id="create">
+        <form action="#" id="dogForm">
+            <input id="name-id-post-input" type="text">
+            <input id="breed-id-post-input" type="text">
+            <input id="age-id-post-input" type="text">
+    
+            <button type="submit">Отправить</button>
+        </form>
+        <div id="dog-info-post"></div>
+    </div>
+    <br>
+    <div class="updateAllDogs-container" id="update">
+       
+        <div class="createAllDogs-container" id="create">
+            <form action="#" id="dogFormPatch">
+                <input id="id-patch-input" type="text">
+                <input id="name-id-patch-input" type="text">
+                <input id="breed-id-patch-input" type="text">
+                <input id="age-id-patch-input" type="text">
+        
+                <button type="submit">Изменить</button>
+            </form>
+            <div id="dog-info-patch"></div>
+        </div>
+
+    </div>
+    <div class="deleteAllDogs-container" id="delete"></div>
+
+
+   
+
+    <script src="index.js"></script>
+</body>
+</html>
