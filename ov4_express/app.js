@@ -5,6 +5,7 @@ const app = express()
 const dogsRouter = require('./routes/dogs.router')
 const catsRouter = require('./routes/cats.router')
 const {sequelize} = require('./models')
+const dogsPages = require('./pages/dogs.pages')
 
 
 async function sync(){
@@ -12,9 +13,7 @@ async function sync(){
     console.log('Successful connection')
     await sequelize.sync()
     console.log('Successful sync')
-
 }
-
 sync()
 
 //let dogs = require('./dogs.json')
@@ -37,6 +36,8 @@ app.get('/', (req, res) => {
 
 app.use('/api/dog', dogsRouter)
 app.use('/api/cat', catsRouter)
+
+app.use ('/dogs', dogsPages)
 
 app.listen(3000, () => {
     console.log('Server started at http://localhost:3000')

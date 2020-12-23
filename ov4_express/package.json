@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --ignore node_moduls package.json app.js",
+    "start": "nodemon --ignore node_modules app.js",
     "jsdome": "nodemon --ignore node_moduls test.js"
   },
   "keywords": [],
