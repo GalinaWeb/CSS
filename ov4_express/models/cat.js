@@ -8,12 +8,12 @@ module.exports = function(sequelize) {
             allowNull: false
         },
         color:{
-          type: DataTypes.STRING,
-          allowNull: false
+            type: DataTypes.STRING,
+            allowNull: false
        },
         weight:{
-              type: DataTypes.INTEGER,
-              allowNull: false
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         food:{
             type: DataTypes.STRING,

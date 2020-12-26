@@ -6,6 +6,7 @@ const dogsRouter = require('./routes/dogs.router')
 const catsRouter = require('./routes/cats.router')
 const {sequelize} = require('./models')
 const dogsPages = require('./pages/dogs.pages')
+const CONFIG = require('./config')
 
 
 async function sync(){
@@ -38,6 +39,10 @@ app.use('/api/dog', dogsRouter)
 app.use('/api/cat', catsRouter)
 
 app.use ('/dogs', dogsPages)
+
+app.get('*/script.js', (req, res) => {
+    res.sendFile(CONFIG.script)
+})
 
 app.listen(3000, () => {
     console.log('Server started at http://localhost:3000')
