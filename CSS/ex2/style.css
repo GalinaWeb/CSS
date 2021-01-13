@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap');
+
+span {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+.conteiner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    --elemmargin: 5px;
+    --colnums: 4;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: var(--elemmargin);
+    padding: 5px;
+    height: 200px;
+    width: calc(100% / var(--colnums) - 2 * var(--elemmargin));
+    /*flex-basis: 50%;*/
+}
+
+@media (min-width: 400px) and (max-width: 550px) {
+    .element {
+        --colnums:2;
+    }
+}
+
+@media (max-width: 400px) {
+    .element {
+        --colnums: 1;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 750px) {
+    .element {
+        --colnums: 3;
+    }
+}
