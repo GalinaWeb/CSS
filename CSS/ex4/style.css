@@ -1,3 +1,17 @@
+@keyframes block-in {
+    from {
+        /*невидимый*/
+        opacity: 0;
+        /*движение*/
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,16 +26,16 @@ img {
 
 .conteiner {
     width: 100%;
-    overflow: hidden;
     position: relative;
 }
 
 
 .picture {
- background: url("https://www.ejin.ru/wp-content/uploads/2019/05/gora-13.jpg");
- width: 100%;
- height: 100vh;
- background-size: cover;
+    background: url("https://www.ejin.ru/wp-content/uploads/2019/05/gora-13.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .header {
@@ -32,11 +46,43 @@ img {
     bottom: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-anim {
+    opacity: 0;
+    animation: block-in .5s linear .5s;
+    animation-fill-mode: forwards;
+}
+
+.header h1, .section h2 {
     font-family: sans-serif;
     color: white;
-    font-size: 60px;
-    background-color: rgba(0, 0, 0, 0.5);
-
+    font-size: 4rem;
+    text-transform: uppercase;
 }
+
+.section {
+    position: static;
+}
+
+.section-1 {
+    background-color: burlywood;
+}
+
+.section-2 {
+    background-color: rgb(238, 178, 228);
+}
+
+.section1-anim {
+    opacity: 0;
+}
+
+.section1-anim.show {
+    animation: block-in .5s linear .5s;
+    animation-fill-mode: forwards;
+}
+
