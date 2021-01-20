@@ -86,3 +86,64 @@ img {
     animation-fill-mode: forwards;
 }
 
+.main-menu {
+    /* фиксирует меню */
+    position: fixed;
+    /* поднимает слой отображения */
+    z-index: 9999;
+    height: 7vh;
+    width: 100%;
+    background-color: rgb(248, 244, 244);
+    overflow: hidden;
+   
+}
+
+.main-menu.show {
+    overflow: visible;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    transform: translateY(50%);
+    gap: 1rem;
+}
+
+.menu li {
+    list-style-type: none;
+    flex-basis: 8rem;
+    /*расстояние между элементами*/
+    gap: 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+@media (max-width: 576px) {
+    .hamburger-container {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+        top: 100%;
+        transform: none;
+        padding-top: .5rem;
+        width: 100%;
+        background-color: white;
+        
+    }
+
+    .menu li {
+        flex-basis: 1rem;
+    }
+
+}
+
